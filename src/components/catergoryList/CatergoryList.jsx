@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './catergory.module.css';
+import styles from './catergoryList.module.css';
 
- function Catergory() {
+ function CatergoryList() {
   return (
     <div className={styles.container}>
         Catergory
@@ -10,4 +10,4 @@ import styles from './catergory.module.css';
 }
 
 
-export default Catergory;
+export default CatergoryList;
