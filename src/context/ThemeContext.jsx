@@ -10,7 +10,7 @@ const getFromLocalStorage = () => {
     const value = localStorage.getItem("theme");
     return value || "light";
   }
-  return "light"; // Fallback value for server-side rendering or when localStorage is unavailable
+  return "light"; // Fallback value for when localStorage is unavailable
 };
 
 export const ThemeContextProvider = ({ children }) => {
@@ -18,15 +18,21 @@ export const ThemeContextProvider = ({ children }) => {
     return getFromLocalStorage();
   });
 
+
+
+  const toggle = () => {
+    setTheme((theme === 'light' ? 'dark' : 'light'));
+  };
+
+
   useEffect(() => {
-    if (typeof window !== "undefined" && window.localStorage) {
-      // Check if window.localStorage is available before using it
       localStorage.setItem("theme", theme);
-    }
   }, [theme]);
 
+
+
   return (
-    <ThemeContext.Provider value={{ theme }}>
+    <ThemeContext.Provider value={{ theme, toggle }}>
       {children}
     </ThemeContext.Provider>
   );

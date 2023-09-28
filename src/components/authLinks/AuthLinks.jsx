@@ -6,8 +6,6 @@ function AuthLinks() {
 
   const status = 'notAuthenticated';
 
-
-
   return ( <>
     {status == 'notAuthenticated' ? (<Link href='/login'>Login</Link>
     
