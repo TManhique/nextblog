@@ -17,10 +17,10 @@ import AuthLinks from "../authLinks/AuthLinks";
         <div className={styles.logo}>blog</div>
         <div className={styles.links}>
           <ThemeToggle />
-          <Link href="/">Home</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Home</Link>
+          <Link href="/" className={styles.link}>Contact</Link>
+          <Link href="/" className={styles.link}>About</Link>
+          <Link href="/" className={styles.link}>Home</Link>
+          <Link href="/" className={styles.link}>Home</Link>
           <AuthLinks />
         </div>
     </div>
